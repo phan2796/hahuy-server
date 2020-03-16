@@ -1,0 +1,11 @@
+extends ../layout.pug
+
+block content
+
+  h2 Congratulation, #{name}!
+  p.
+    Your trip request has been approved with the following budget limit: #{budget}.
+    Please book your trip while the deal is still available.
+
+  p.text-center
+    a(class='btn' href= bookLink) Book now

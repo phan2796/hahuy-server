@@ -1,0 +1,42 @@
+extends ../layout.pug
+
+block content
+  h2.text-center Cancel Flight
+  h3 PNR: #{pnr}
+  h3 Price: #{price} #{currency}
+  h3 Passengers:
+  ul
+    each p in passengers
+      li
+        |#{p.firstName} #{p.lastName} (#{p.businessEmail})
+  h3 Contact:
+  ul
+    li
+      |Email: #{contactInfo.email}
+
+  h3 Departure Flights
+  ul
+    each segment in flight.departureSegments
+      li
+        | #{segment.departure} - #{segment.arrival}
+        br
+        | Airline: #{segment.airline} (#{segment.cabinClass})
+        br
+        | Departure: #{segment.strDepartureTime}, #{segment.strDepartureDate}
+        br
+        | Arrival: #{segment.strArrivalTime}, #{segment.strArrivalDate}
+
+  if (flight.returnSegments.length > 0)
+    h3 Return Flights
+    ul
+      each segment in flight.returnSegments
+        li
+          | #{segment.departure} - #{segment.arrival}
+          br
+          | Airline: #{segment.airline} (#{segment.cabinClass})
+          br
+          | Departure: #{segment.strDepartureTime}, #{segment.strDepartureDate}
+          br
+          | Arrival: #{segment.strArrivalTime}, #{segment.strArrivalDate}
+
+  h3 Please reply us cancellation charge and cancellation status. Thank you!

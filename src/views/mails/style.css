@@ -1,0 +1,99 @@
+/* Common style */
+
+body {
+  font-family: sans-serif;
+  font-size: 15px;
+  line-height: 1.4;
+  color: #4d4d4d;
+}
+
+#tas-wrapper {
+  min-width: 200px;
+  max-width: 600px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  overflow: hidden;
+}
+#tas-wrapper img {
+  outline: none;
+  text-decoration: none;
+  -ms-interpolation-mode: bicubic;
+  max-width: 100%;
+}
+#tas-wrapper h1,
+#tas-wrapper h2,
+#tas-wrapper h3,
+#tas-wrapper h4,
+#tas-wrapper h5,
+#tas-wrapper h6 {
+  color: #222;
+  margin: 10px 0;
+}
+#tas-wrapper p {
+  margin: 10px 0;
+}
+#tas-wrapper p.tab {
+  margin: 10px 0px 10px 20px;
+}
+#tas-wrapper li {
+  margin-bottom: 10px;
+}
+#tas-wrapper header {
+  background-color: #f5f5f5;
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 10px 0;
+}
+#tas-wrapper header h2,
+#tas-wrapper header h3 {
+  margin: 0;
+}
+#tas-wrapper table {
+  font-size: 15px;
+  line-height: 1.4;
+}
+#tas-wrapper .banner {
+  text-align: center;
+  margin-bottom: 40px;
+}
+#tas-wrapper .banner img {
+  border-radius: 5px;
+}
+#tas-wrapper .text-center {
+  text-align: center;
+}
+#tas-wrapper .text-capitalize {
+  text-transform: capitalize;
+}
+#tas-wrapper .inline-block {
+  display: inline-block;
+}
+#tas-wrapper a {
+  color: #f4b400;
+  word-break: break-all;
+  transition: all 0.3s ease-in-out;
+}
+#tas-wrapper a:hover {
+  color: #ff7700;
+}
+#tas-wrapper .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #f4b400;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+#tas-wrapper .btn:hover {
+  background-color: #ff7700;
+  color: #fff;
+}

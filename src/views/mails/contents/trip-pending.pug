@@ -1,0 +1,40 @@
+extends ../layout.pug
+
+block content
+
+  h2 Hello!
+  p
+    strong #{employeeName} 
+    = ' '
+    |is seeking for your approval on below trip request:
+  
+  h3 #{tripName}
+  p Start date: #{startDate}
+  p End date: #{endDate}
+  p Service request:
+
+  ul
+    if (isFlightSelected)
+      li.
+        Flight: #{flight}, departure: #{departDate}#{isRoundTrip ? ', return: ' + returnDate : ''}
+
+    if (isLodgingSelected)
+      li.
+        Hotel: #{regionName},
+        Check-in: #{checkInDate}, 
+        Check-out: #{checkOutDate}
+
+    if (isTransportationSelected)
+      li Transportation: #{daysOfTrip} day(s)
+
+    if (isMealSelected)
+      li Daily meal: #{daysOfTrip} day(s)
+
+    if (isOthersSelected)
+      li Other: #{other}
+      li Note: #{note}
+
+  h4 Estimated budget: #{budget}
+  br
+  p.text-center
+    a(class='btn' href= reviewLink) Review and Approve request
