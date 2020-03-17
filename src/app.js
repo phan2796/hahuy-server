@@ -18,7 +18,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use(express.static(path.join(__dirname, 'public')))
 
-const recordRouter = require('./routes/records')
+const scoreRouter = require('./routes/socre')
 // limit cors for 1 origin (client app uri)
 const origins = process.env.ALLOW_ORIGIN
   ? process.env.ALLOW_ORIGIN.split(',')
@@ -38,7 +38,7 @@ app.use(
   })
 )
 
-app.use('/records', recordRouter)
+app.use('/score', scoreRouter)
 
 
 // catch 404 and forward to error handler

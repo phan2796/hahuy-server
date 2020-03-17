@@ -1,6 +1,6 @@
-const Record = require('../../models/record')
+const Score = require('../../models/score')
 
-const records = [
+const scores = [
   {
     name: 'Le Ha Phan',
     score: 100 
@@ -11,18 +11,18 @@ const records = [
   },
 ]
 
-const populateRecords = done => {
-  return Record.deleteMany({})
+const populateScores = done => {
+  return Score.deleteMany({})
     .then(() => {
-      return Promise.all(records.map(record => new Record(record)))
+      return Promise.all(scores.map(score => new Score(score)))
     })
     .then(res => {
-      return Promise.all(res.map(record => record.save()))
+      return Promise.all(res.map(score => score.save()))
     })
 }
 
 
 module.exports = {
-  records,
-  populateRecords
+  scores,
+  populateScores
 }

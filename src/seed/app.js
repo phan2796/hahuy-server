@@ -2,7 +2,7 @@ require('../config/config')
 require('../config/mongoose')
 
 const {
-  populateRecords,
+  populateScores,
 } = require('./data/dev')
 
 const yargs = require('yargs')
@@ -23,8 +23,8 @@ let seedCollections = argv.c
 
 let collections = [
   {
-    collection: 'records',
-    population: populateRecords
+    collection: 'scores',
+    population: populateScores
   }
 ]
 
