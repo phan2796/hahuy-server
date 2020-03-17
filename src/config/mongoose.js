@@ -1,7 +1,7 @@
 var mongoose = require('mongoose')
 mongoose.Promise = global.Promise
 mongoose.set('useFindAndModify', false)
-
+console.log(process.env)
 mongoose
     .connect(
         process.env.MONGODB_URI, 

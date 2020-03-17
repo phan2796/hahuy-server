@@ -1,9 +1,5 @@
 {
-  "test": {
-    "PORT": "8080",
-    "MONGODB_URI": "mongodb://localhost:27017/hahuy-test"
-  },
-  "development": {
+  "develop": {
     "PORT": "8080",
     "MONGODB_URI": "mongodb://localhost:27017/hahuy"
   }

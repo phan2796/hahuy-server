@@ -1,3 +1,4 @@
+require('dotenv').config()
 require('./config/config')
 require('./config/mongoose')
 

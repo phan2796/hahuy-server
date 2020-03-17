@@ -1,6 +1,6 @@
-var env = process.env.NODE_ENV || 'development'
+var env = process.env.NODE_ENV || 'develop'
 
-if (env === 'development' || env === 'test') {
+if (env === 'develop') {
   var config = require('./config.json')
   var envConfig = config[env]
 
