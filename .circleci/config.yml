@@ -1,0 +1,28 @@
+version: 2
+jobs:
+   deploy:
+    docker:
+      - image: circleci/node:10.15.0-jessie-browsers-legacy
+    steps:
+      - run:
+          name: AWS EC2 deploy (production)
+          command: |
+            ssh -o StrictHostKeyChecking=no $SSH_USER@$SSH_HOST \
+            "echo Start production deploy && \
+            source ~/prod.env
+            cd ~/hahuy-server && \
+            git fetch --all && \
+            git reset --hard origin/master && \
+            yarn && \
+            pm2 stop "hahuy-server" && \
+            pm2 start ecosystem.config.js --env production --name "hahuy-server" && \
+            echo Deploy production end"
+workflows:
+  version: 2
+  test_and_deploy:
+    jobs:
+      - deploy:
+          filters:
+            branches:
+              only:
+                - master
