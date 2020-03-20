@@ -9,7 +9,6 @@ jobs:
           command: |
             ssh -o StrictHostKeyChecking=no $SSH_USER@$SSH_HOST \
             "echo Start production deploy && \
-            source ~/prod.env
             cd ~/hahuy-server && \
             git fetch --all && \
             git reset --hard origin/master && \
